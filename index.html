@@ -1502,19 +1502,17 @@
             padding: 18px 20px;
             box-shadow: var(--shadow);
             display: grid;
-            grid-template-columns: 56px 1fr auto;
+            grid-template-columns: 56px 1fr;
             gap: 16px;
             align-items: center;
             transition: var(--transition);
             text-decoration: none;
             color: inherit;
-            cursor: pointer;
         }
 
-        .next-module-card:hover {
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-md);
-            border-color: rgba(45, 143, 135, 0.28);
+        .next-module-card,
+        .next-module-card * {
+            cursor: default;
         }
 
         .next-module-icon {
@@ -1557,21 +1555,13 @@
             font-weight: 700;
         }
 
-        .next-module-arrow {
-            color: var(--teal);
-            font-size: 24px;
-            line-height: 1;
-            opacity: 0.85;
-            padding-left: 4px;
-        }
-
         @media(max-width:700px) {
             .next-modules {
                 grid-template-columns: 1fr;
             }
 
             .next-module-card {
-                grid-template-columns: 48px 1fr auto;
+                grid-template-columns: 48px 1fr;
                 gap: 14px;
                 padding: 16px;
             }
@@ -1582,9 +1572,6 @@
                 border-radius: 12px;
             }
 
-            .next-module-arrow {
-                font-size: 20px;
-            }
         }
 
         /* ── OPTIONAL QUESTION ──────────────────────────────── */
@@ -4721,9 +4708,7 @@
                 <div class="section-label suggested-next-label">Suggested Next Modules</div>
                 <div class="next-modules">
 
-                    <a class="next-module-card"
-                        href="https://vagabondigital.github.io/sounding-senior-and-in-control-module/" target="_blank"
-                        rel="noopener">
+                    <div class="next-module-card">
                         <div class="next-module-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor"
@@ -4739,11 +4724,9 @@
                             <div class="next-module-desc"><strong>Best for:</strong> making your meeting
                                 contributions sound calmer, shorter, and more authoritative.</div>
                         </div>
-                        <div class="next-module-arrow">&#8594;</div>
-                    </a>
+                    </div>
 
-                    <a class="next-module-card" href="https://vagabondigital.github.io/client-call-confidence-module/"
-                        target="_blank" rel="noopener">
+                    <div class="next-module-card">
                         <div class="next-module-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path
@@ -4759,12 +4742,9 @@
                             <div class="next-module-desc"><strong>Best for:</strong> meetings and calls that feel
                                 difficult because the conversation moves quickly.</div>
                         </div>
-                        <div class="next-module-arrow">&#8594;</div>
-                    </a>
+                    </div>
 
-                    <a class="next-module-card"
-                        href="https://vagabondigital.github.io/presentation-and-qa-structure-module/" target="_blank"
-                        rel="noopener">
+                    <div class="next-module-card">
                         <div class="next-module-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <rect x="3" y="3" width="18" height="14" rx="2" stroke="currentColor"
@@ -4781,12 +4761,9 @@
                             <div class="next-module-desc"><strong>Best for:</strong> presenting ideas or answering
                                 questions in a more formal meeting setting.</div>
                         </div>
-                        <div class="next-module-arrow">&#8594;</div>
-                    </a>
+                    </div>
 
-                    <a class="next-module-card"
-                        href="https://vagabondigital.github.io/negotiation-and-difficult-conversations-module/"
-                        target="_blank" rel="noopener">
+                    <div class="next-module-card">
                         <div class="next-module-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M12 3l-8 4v5c0 4 3 7.5 8 9 5-1.5 8-5 8-9V7L12 3z" stroke="currentColor"
@@ -4801,8 +4778,7 @@
                             <div class="next-module-desc"><strong>Best for:</strong> meetings that involve tension,
                                 disagreement, sensitive topics, or difficult decisions.</div>
                         </div>
-                        <div class="next-module-arrow">&#8594;</div>
-                    </a>
+                    </div>
 
                 </div>
             </div>
